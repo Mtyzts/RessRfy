@@ -3,48 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Myt.Id</title>
+    <title>Mytz.Ys</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: relative; /* Tambahkan posisi relatif */
+            height: 100px; /* Atur ketinggian header sesuai kebutuhan */
+            overflow: hidden; /* Sembunyikan bagian yang melebihi ketinggian header */
+            color: #fff;
+            text-align: center;
+        }
+        /* Gunakan video sebagai background header */
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Pastikan video mengisi seluruh area header */
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            background-image: url(Source/Belajar.jpg);
+            padding: 20px;
+            overflow: auto;
+            border-radius: 10px;
+        }
+
+        .text {
+            float: left;
+            width: calc(100% - 150px); /* Ukuran gambar (150px) dikurangi margin */
+            text-align: left; /* Mengatur teks menjadi kiri */
+        }
+
+        img {
+            max-width: 100%;
+            width: 55px;
+            height: 50px;
+            border-radius: 40px;
+        }
+
+    </style>
 </head>
-<audio autoplay loop src="BackSounds.mp3"></audio>
 <body>
+    <!-- Header dengan video sebagai background -->
+    <header>
+        <video autoplay loop muted>
+            <source src="Source/Vid1.mp4" type="video/mp4">
+            <!-- Tambahkan tag source sesuai dengan format video yang Anda gunakan -->
+            Your browser does not support the video tag.
+        </video>
+        <h1>Komentar Singkat, Malas Ngedit</h1>
+    </header>
+    <nav>
+        <a href="https://www.suaramerdeka.com/cabang-lain/pr-0467765/taekwondoin-utipro-kab-semarang-sabet-sembilan-emas">Web Resmi Peraihan</a>
+    </nav>
 
-    <h1> <center>Sesuatu Yang Harus di ketahui</center></h1>
+    <div class="container">
+        <div class="content">
+            <img src="Source/Rhs.jpeg" alt="Gambar" style="float: left; margin-right: 20px;">
+            <div class="text">
+                <p>Hai, Nama saya Matias. Saya Berumur 15 saat ini, saya adalah orang biasa yang merintis karir. Apakah kalian tahu ?</p>
+                <p> Jika Kalian Tidak Tahu, Saya Juga sama. Kata kata hari Ini : <blockquote> <b> Berjuanglah </b> dalam Proses, Di dalam langkah banyak halangan. Terkadang orang menginginkan sesuatu hanya dengan melihat hasilnya. Tidak ada salahnya jika tidak ada yang tahu <cite>Prosesmu</cite>, tapi mereka akan tahu hasilnya. Kesepian Bukan lah hal yang harus ditakuti, tetapi kemalasan lah yang harus kita hadapi <mark>#MAAF CUMAN GABUT YA, BUAT TESTING AJAHH</mark></blockquote></p>
+                <p>Terimakasih Sekian Saja bro, Kegabutan saya . fitur di Nav Bis di Pencet Ya</p>
+                <br> 
+            </div>
+        </div>
+    </div>    
 
-    <a href="Rahul/Proyek.html">Test</a>
-    <p>
-        <ol>
-            <li>
-                RAHUL MAS
-            </li>
-        </ol>
-    </p>
-    <abbr title="ROWR">INFO SAJA</abbr>
+    <!-- Meminta izin untuk autoplay -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var promise = document.querySelector('audio').play();
+            if (promise !== undefined) {
+                promise.then(_ => {}).catch(error => {});
+            }
+        });
+    </script>
 
-    <p>hai, nama saya <mark>"BETA TEST"</mark> .....<br>
-    Saya berumur 15 YAHAHAHAHAHA : </p>
-    <blockquote> <p>Walau pun <cite>Dunia</cite> tak seindah surga, aku selalu tulus menjalankan nya</p> </blockquote>
-    
-    
-    <ol type="1">
-        <li>Php</li>
-        <li>Python</li>
-        <li>Java</li>
-    </ol>
+    <!-- Audio autoplay -->
+    <audio autoplay loop src="Source/BackSounds.mp3"></audio>
 
-    <ul>
-        <li>Rahul</li>
-        <li>whatsap</li>
-        <li>Youtube</li>
-
-    </ul>
-
-
-    
-    <p>
-        <br><br><br><br>
-        <small> <center> Copyright &copy; 2024 Mtzt.ys/com </center></small>
-    </p>
-
+    <footer>
+        <p>Copyright &copy; 2024 Mtyz.RessRyf / github.io</p>
+    </footer>
 </body>
-
 </html>
