@@ -115,6 +115,27 @@
     <!-- Audio autoplay -->
     <audio autoplay loop src="BackSounds.mp3"></audio>
 
+    <!-- Script untuk menampilkan notifikasi saat halaman di-refresh -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cek apakah browser mendukung Notifikasi
+            if (!("Notification" in window)) {
+                console.log("This browser does not support desktop notification");
+            } else {
+                // Minta izin untuk menerima notifikasi
+                Notification.requestPermission().then(function (permission) {
+                    if (permission === "granted") {
+                        // Jika izin diberikan, kirim notifikasi
+                        var notification = new Notification("Wahai Kalian!", {
+                            body: "Yang Jomblo, Semoga dapat Rejeki",
+                            icon: "icon.png" // Ganti dengan URL ikon notifikasi Anda
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+
     <footer>
         <p>Copyright &copy; 2024 Mtyz.RessRyf / github.io</p>
     </footer>
