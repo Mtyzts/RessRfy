@@ -9,22 +9,22 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6; /* Atur jarak antar baris */
         }
         header {
-            position: relative;
-            height: 100px;
-            overflow: hidden;
+            position: relative; /* Tambahkan posisi relatif */
+            height: 100px; /* Atur ketinggian header sesuai kebutuhan */
+            overflow: hidden; /* Sembunyikan bagian yang melebihi ketinggian header */
             color: #fff;
             text-align: center;
         }
+        /* Gunakan video sebagai background header */
         header video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Pastikan video mengisi seluruh area header */
         }
         nav {
             background-color: #444;
@@ -45,39 +45,33 @@
             margin: 20px auto;
             text-align: center;
         }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
         .content {
             background-image: url(Source/Belajar.jpg);
             padding: 20px;
             overflow: auto;
             border-radius: 10px;
         }
+
         .text {
             float: left;
-            width: calc(100% - 150px);
-            text-align: left;
-            margin-top: 20px; /* Atur jarak antara teks dengan gambar */
+            width: calc(100% - 150px); /* Ukuran gambar (150px) dikurangi margin */
+            text-align: left; /* Mengatur teks menjadi kiri */
         }
+
         img {
             max-width: 100%;
             width: 55px;
             height: 50px;
             border-radius: 40px;
-        }
-
-        /* Media queries untuk tampilan responsif */
-        @media screen and (max-width: 600px) {
-            /* Atur ukuran font dan margin untuk layar kecil */
-            header {
-                height: 80px;
-            }
-            .text {
-                width: 100%;
-                margin-top: 10px;
-            }
-            img {
-                width: 40px;
-                height: 40px;
-            }
         }
 
     </style>
@@ -87,6 +81,7 @@
     <header>
         <video autoplay loop muted>
             <source src="Vid1.mp4" type="video/mp4">
+            <!-- Tambahkan tag source sesuai dengan format video yang Anda gunakan -->
             Your browser does not support the video tag.
         </video>
         <h1>Komentar Singkat, Malas Ngedit</h1>
@@ -107,11 +102,21 @@
         </div>
     </div>    
 
+    <!-- Meminta izin untuk autoplay -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var promise = document.querySelector('audio').play();
+            if (promise !== undefined) {
+                promise.then(_ => {}).catch(error => {});
+            }
+        });
+    </script>
+
+    <!-- Audio autoplay -->
     <audio autoplay loop src="BackSounds.mp3"></audio>
 
     <footer>
-        <p>&copy; 2024 Mtyz.RessRyf / github.io</p>
-        <!-- Tambahkan elemen <p> di dalam footer -->
+        <p>Copyright &copy; 2024 Mtyz.RessRyf / github.io</p>
     </footer>
 </body>
 </html>
